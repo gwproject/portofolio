@@ -1,0 +1,24 @@
+{
+  "name": "portofolio",
+  "version": "1.0.0",
+  "description": "GWPROJECT portfolio website",
+  "main": "gwproject.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gwproject/portofolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gwproject/portofolio/issues"
+  },
+  "homepage": "https://github.com/gwproject/portofolio",
+  "devDependencies": {
+    "vite": "^8.2.2"
+  }
+}
