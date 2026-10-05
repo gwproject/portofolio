@@ -1,0 +1,288 @@
+:root {
+    --bg: #000;
+    --white: #ffffef;
+    --grey: #8d8d8d;
+    --line: #292929;
+    --accent: #ffffef;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: GeneralSans, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+#playground-page {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* HEADER INTRO */
+.pg-intro {
+    padding: 3vw 4vw 2vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .pg-intro .eyebrow {
+        color: var(--grey);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 11px;
+        letter-spacing: 0.11em;
+        margin-bottom: 15px;
+    }
+
+        .pg-intro .eyebrow span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--white);
+        }
+
+    .pg-intro h1 {
+        font-size: clamp(50px, 10vw, 150px);
+        line-height: 0.85;
+        font-weight: 900;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+    }
+
+    .pg-intro .subhead {
+        color: #777;
+        font-size: 11px;
+        letter-spacing: 0.15em;
+        margin-top: 18px;
+        max-width: 550px;
+        text-transform: uppercase;
+    }
+
+/* KINETIC TYPE SANDBOX STAGE */
+.type-sandbox {
+    width: 100%;
+    padding: 2vw 4vw 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vw;
+}
+
+/* CONTROL PANEL */
+.sandbox-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--line);
+    padding: 12px 24px;
+    border-radius: 40px;
+    backdrop-filter: blur(10px);
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+    .control-group label {
+        font-size: 10px;
+        color: var(--grey);
+        letter-spacing: 0.12em;
+        margin-right: 4px;
+    }
+
+.preset-btn, .theme-btn {
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--grey);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .preset-btn:hover, .theme-btn:hover {
+        color: var(--white);
+        border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .preset-btn.active, .theme-btn.active {
+        background: var(--white);
+        color: #000;
+        border-color: var(--white);
+    }
+
+/* KINETIC STAGE */
+.kinetic-stage {
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 4vw 0;
+    user-select: none;
+    cursor: crosshair;
+    overflow: hidden;
+}
+
+.type-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.char {
+    font-size: clamp(80px, 18vw, 260px);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    display: inline-block;
+    transform-origin: center center;
+    will-change: transform, color, filter;
+    transition: color 0.4s ease;
+}
+
+/* THEME MODES FOR KINETIC TYPE */
+body.theme-neon .char {
+    color: #00ffcc;
+    text-shadow: 0 0 20px rgba(0, 255, 204, 0.4);
+}
+
+body.theme-gradient .char {
+    background: linear-gradient(135deg, #ff0055, #ff9900);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* VAULT SHOWCASE SECTION */
+.vault-section {
+    padding: 6vw 4vw;
+    border-top: 1px solid var(--line);
+}
+
+.vault-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3vw;
+}
+
+    .vault-header h2 {
+        font-size: clamp(24px, 3.5vw, 48px);
+        font-weight: 500;
+        letter-spacing: -0.03em;
+    }
+
+    .vault-header p {
+        color: var(--grey);
+        font-size: 11px;
+        letter-spacing: 0.12em;
+    }
+
+.vault-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vw;
+}
+
+.vault-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.card-media {
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    overflow: hidden;
+    background: #111;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+}
+
+    .card-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+.vault-card:hover .card-media img {
+    transform: scale(1.06);
+    opacity: 1;
+}
+
+.card-info span {
+    font-size: 10px;
+    color: var(--grey);
+    letter-spacing: 0.12em;
+}
+
+.card-info h4 {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-top: 4px;
+    text-transform: uppercase;
+}
+
+/* FOOTER */
+.pg-footer {
+    border-top: 1px solid var(--line);
+    padding: 30px 4vw;
+    display: flex;
+    justify-content: space-between;
+    color: #737373;
+    font-size: 11px;
+    letter-spacing: 0.11em;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 900px) {
+    .vault-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4vw;
+    }
+
+    .sandbox-controls {
+        border-radius: 20px;
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .vault-grid {
+        grid-template-columns: 1fr;
+        gap: 6vw;
+    }
+
+    .sandbox-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .kinetic-stage {
+        min-height: 30vh;
+    }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playground — Galih Wiliana Putra</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="./gwproject.css" />
+    <link rel="stylesheet" href="./playground.css" />
+</head>
+
+<body>
+    <!-- CURSOR FOLLOWER -->
+    <div id="move-circle">
+        <h6>VIEW</h6>
+    </div>
+
+    <!-- MOBILE SLIDE DRAWER MENU -->
+    <div id="mobile-slide">
+        <div id="slide-nav">
+            <h5 class="nav-start-head"><a href="./index.html">Galih Wiliana</a></h5>
+            <h5 id="close"><a>CLOSE</a></h5>
+        </div>
+        <ul id="slide-nav-menu">
+            <li><a href="./index.html">home</a></li>
+            <li><a href="./work.html">work</a></li>
+            <li><a href="./playground.html">playground</a></li>
+            <li><a href="#playground-footer">contact</a></li>
+        </ul>
+        <div id="slide-foot">
+            <h5><a href="#" target="_blank">linkedin</a></h5>
+            <h5><a href="#" target="_blank">X/twitter</a></h5>
+            <h5><a href="#" target="_blank">instagram</a></h5>
+            <h5><a href="#" target="_blank">Youtube</a></h5>
+        </div>
+    </div>
+
+    <div id="playground-page">
+        <!-- DESKTOP NAVBAR -->
+        <header>
+            <nav>
+                <div id="logo-div">
+                    <h3 id="logo"><a href="./index.html">Galih Wiliana Putra</a></h3>
+                </div>
+                <div id="nav-inner">
+                    <ul id="nav-inner-ul">
+                        <li><a href="./work.html">WORK</a></li>
+                        <li><a href="./playground.html" class="active">PLAYGROUND</a></li>
+                        <li><a href="#playground-footer">CONTACT</a></li>
+                    </ul>
+                    <h3 id="menu">MENU<i class="ri-add-line"></i></h3>
+                    <h3 id="extra">MENU<i class="ri-add-line"></i></h3>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!-- HEADER INTRO -->
+            <section class="pg-intro">
+                <p class="eyebrow"><span></span> KINETIC TYPE & VISUAL LABS</p>
+                <h1>PLAYGROUND</h1>
+                <p class="subhead">INTERACTIVE SANDBOX — MOVE YOUR CURSOR OR USE CONTROLS TO DISTORT THE TYPE</p>
+            </section>
+
+            <!-- INTERACTIVE KINETIC TYPE CANVAS -->
+            <section class="type-sandbox">
+
+                <!-- CONTROL PANEL -->
+                <div class="sandbox-controls">
+                    <div class="control-group">
+                        <label>PRESET TEXT:</label>
+                        <button class="preset-btn active" data-text="GALIH">GALIH</button>
+                        <button class="preset-btn" data-text="MOTION">MOTION</button>
+                        <button class="preset-btn" data-text="DESIGN">DESIGN</button>
+                    </div>
+
+                    <div class="control-group">
+                        <label>COLOR MODE:</label>
+                        <button class="theme-btn active" data-theme="default">MONO</button>
+                        <button class="theme-btn" data-theme="neon">CYBER</button>
+                        <button class="theme-btn" data-theme="gradient">HEAT</button>
+                    </div>
+                </div>
+
+                <!-- STAGE TEXT INTERAKTIF -->
+                <div class="kinetic-stage" id="kineticStage">
+                    <div class="type-row" id="typeRow">
+                        <span class="char">G</span>
+                        <span class="char">A</span>
+                        <span class="char">L</span>
+                        <span class="char">I</span>
+                        <span class="char">H</span>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- SECONDARY SHOWCASE: UNPUBLISHED VAULT -->
+            <section class="vault-section">
+                <div class="vault-header">
+                    <h2>UNPUBLISHED EXPERIMENTS</h2>
+                    <p>(04) VISUAL EXPLORATIONS</p>
+                </div>
+
+                <div class="vault-grid">
+
+                    <div class="vault-card">
+                        <div class="card-media">
+                            <img src="./images/baron-capital.webp" alt="3D Concept" />
+                        </div>
+                        <div class="card-info">
+                            <span>01 / 3D SCENE</span>
+                            <h4>NEO-TOKYO RENDER</h4>
+                        </div>
+                    </div>
+
+                    <div class="vault-card">
+                        <div class="card-media">
+                            <img src="./images/lucid-motors.webp" alt="Motion Graphic" />
+                        </div>
+                        <div class="card-info">
+                            <span>02 / MOTION</span>
+                            <h4>LIQUID TYPE LOOP</h4>
+                        </div>
+                    </div>
+
+                    <div class="vault-card">
+                        <div class="card-media">
+                            <img src="./images/nfl.webp" alt="Branding" />
+                        </div>
+                        <div class="card-info">
+                            <span>03 / BRANDING</span>
+                            <h4>ABSTRACT LOGO EXPORT</h4>
+                        </div>
+                    </div>
+
+                    <div class="vault-card">
+                        <div class="card-media">
+                            <img src="./images/placenew.webp" alt="UI Concept" />
+                        </div>
+                        <div class="card-info">
+                            <span>04 / UI EXPERIMENT</span>
+                            <h4>MICRO-INTERACTION</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer id="playground-footer" class="pg-footer">
+            <span>© 2025 GALIH WILIANA PUTRA</span>
+            <span>BACK TO TOP <i class="ri-arrow-up-line"></i></span>
+        </footer>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="./playground.js"></script>
+</body>
+</html>
